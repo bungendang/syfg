@@ -17,10 +17,8 @@ Route::get('/', function () {
 
 
 Route::group(['prefix'=>'en'],function(){
-	Route::get('/', function () {
-	    return view('en/home');
-	});
-	Route::get('/terhah-lang', function () {
-	    return view('en/terhah-lang');
-	});
+	Route::get('/', 'EnglishController@index');
+	Route::get('/terhah-lang', 'EnglishController@terhahLang');
+	Route::get('/works','EnglishController@works');
+	Route::get('/works/{slug}','EnglishController@worksTitle');
 });
