@@ -1,0 +1,24 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "normalize";
+@import "compass/utilities";
+@import "compass/css3";
+@import "susy";
+
+//setting susy
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  math: fluid,
+  container: 1100px,
+  container-position: center,
+  output: float,
+  gutter-position: inside,
+);
+///end setting susy
+
+@import "syfg/grids";
+
+body{
+	background-color: #FFF;
+}
+//@import "../syfg/sass/grids";

@@ -1,0 +1,81 @@
+@font-face {
+    font-family:"terhahFont";
+    src: url("/assets/fonts/agencyr.eot") /* EOT file for IE */
+}
+@font-face {
+    font-family:"terhahFont";
+    src: url("/assets/fonts/terhahFontRegular.ttf") /* TTF file for CSS3 browsers */
+}
+
+body.terhah{
+	font-family:'terhahFont';
+}
+
+.header{
+	@include span(12 nest);
+	background-color: #FFF;
+	.logos{
+		@include span(3 first);
+		background-color: #EEEEEE;
+	}
+	.lang-mn{
+		@include span(3 last);
+		background-color: #CCCCCC;
+		text-align: center;
+		ul.inline{
+			list-style-type: none;
+			padding: 0;
+			margin:0;
+			li:before{
+				content: " | ";
+			}
+			li:first-child:before{
+				content:none;
+			}
+			li{
+				display: inline;
+			}
+			li.en{
+			font-family: "Trebuchet MS", Helvetica, sans-serif;				
+			}
+			li.th{
+			font-family:'terhahFont';
+			}
+		}
+	}
+}
+.main-body{
+	@include span(12 nest);
+	.sidebar{
+		@include span(3 first);
+		ul.main-menu{
+			list-style-type: none;
+			padding:0;
+			margin: 0;
+			li{
+
+			}
+		}
+	}
+	.main-content{
+		@include span(9 last);
+		.inner-content{
+			@include span(8 of 12);
+			@include push(2);
+			text-align: justify;
+			.list-exhibition{
+				.solo-exhibition{
+					table.exhibition{
+						width: 100%;
+						tr{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.footer{
+	
+}

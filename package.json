@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "laravel-elixir-sass-compass": "^0.4.0",
+    "normalize-scss": "^3.0.3",
+    "susy": "^2.2.6"
+  },
+  "dependencies": {
+    "laravel-elixir": "^3.0.0",
+    "bootstrap-sass": "^3.0.0"
+  }
+}
