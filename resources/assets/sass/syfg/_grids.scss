@@ -10,17 +10,22 @@
 body.terhah{
 	font-family:'terhahFont';
 }
+body{
+	font-family: Tahoma, Geneva, sans-serif;
+}
 
 .header{
 	@include span(12 nest);
 	background-color: #FFF;
 	.logos{
 		@include span(3 first);
-		background-color: #EEEEEE;
+		//background-color: #EEEEEE;
+		font-size:18px;
+		//font-weight: bold;
 	}
 	.lang-mn{
 		@include span(3 last);
-		background-color: #CCCCCC;
+		//background-color: #CCCCCC;
 		text-align: center;
 		ul.inline{
 			list-style-type: none;
@@ -48,27 +53,58 @@ body.terhah{
 	@include span(12 nest);
 	.sidebar{
 		@include span(3 first);
-		ul.main-menu{
-			list-style-type: none;
-			padding:0;
-			margin: 0;
-			li{
-
-			}
-		}
+		
 	}
 	.main-content{
 		@include span(9 last);
 		.inner-content{
+			//works page
+			font-size: 12px;
+			figure{
+				width: 100% !important;
+				height: auto;
+				margin: 0px;
+				padding-bottom:50px;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+			iframe{
+				width: 100% !important;
+				height: 400px;
+			}
+			//end works page
 			@include span(8 of 12);
 			@include push(2);
 			text-align: justify;
 			.list-exhibition{
-				.solo-exhibition{
+				.solo-exhibition,.group-exhibition{
+					h2.title{
+					font-size: 14px;
+					}
 					table.exhibition{
 						width: 100%;
+						font-size: 12px;
 						tr{
 							text-decoration: none;
+							td{
+								//padding:5px;
+								vertical-align: top;
+							}
+							td.year{
+								width: 76px !important;
+							}
+							td.title{
+								width: 200px !important;
+								text-align: left;
+							}
+							td.place-information{
+							}
 						}
 					}
 				}

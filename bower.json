@@ -1,0 +1,18 @@
+{
+  "name": "syaifulgaribadi.com",
+  "description": "Personal Website Syaiful Garibaldi",
+  "main": "",
+  "authors": [
+    "bungendang"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "syaifulgaribaldi.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

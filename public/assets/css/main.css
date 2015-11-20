@@ -552,7 +552,11 @@ th {
 body.terhah {
   font-family: 'terhahFont'; }
 
-/* line 14, ../../../resources/assets/sass/syfg/_grids.scss */
+/* line 13, ../../../resources/assets/sass/syfg/_grids.scss */
+body {
+  font-family: Tahoma, Geneva, sans-serif; }
+
+/* line 17, ../../../resources/assets/sass/syfg/_grids.scss */
 .header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -560,7 +564,7 @@ body.terhah {
   width: 100%;
   float: left;
   background-color: #FFF; }
-  /* line 17, ../../../resources/assets/sass/syfg/_grids.scss */
+  /* line 20, ../../../resources/assets/sass/syfg/_grids.scss */
   .header .logos {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -569,8 +573,8 @@ body.terhah {
     float: left;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
-    background-color: #EEEEEE; }
-  /* line 21, ../../../resources/assets/sass/syfg/_grids.scss */
+    font-size: 18px; }
+  /* line 26, ../../../resources/assets/sass/syfg/_grids.scss */
   .header .lang-mn {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -579,37 +583,36 @@ body.terhah {
     float: right;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
-    background-color: #CCCCCC;
     text-align: center; }
-    /* line 25, ../../../resources/assets/sass/syfg/_grids.scss */
+    /* line 30, ../../../resources/assets/sass/syfg/_grids.scss */
     .header .lang-mn ul.inline {
       list-style-type: none;
       padding: 0;
       margin: 0; }
-      /* line 29, ../../../resources/assets/sass/syfg/_grids.scss */
+      /* line 34, ../../../resources/assets/sass/syfg/_grids.scss */
       .header .lang-mn ul.inline li:before {
         content: " | "; }
-      /* line 32, ../../../resources/assets/sass/syfg/_grids.scss */
+      /* line 37, ../../../resources/assets/sass/syfg/_grids.scss */
       .header .lang-mn ul.inline li:first-child:before {
         content: none; }
-      /* line 35, ../../../resources/assets/sass/syfg/_grids.scss */
+      /* line 40, ../../../resources/assets/sass/syfg/_grids.scss */
       .header .lang-mn ul.inline li {
         display: inline; }
-      /* line 38, ../../../resources/assets/sass/syfg/_grids.scss */
+      /* line 43, ../../../resources/assets/sass/syfg/_grids.scss */
       .header .lang-mn ul.inline li.en {
         font-family: "Trebuchet MS", Helvetica, sans-serif; }
-      /* line 41, ../../../resources/assets/sass/syfg/_grids.scss */
+      /* line 46, ../../../resources/assets/sass/syfg/_grids.scss */
       .header .lang-mn ul.inline li.th {
         font-family: 'terhahFont'; }
 
-/* line 47, ../../../resources/assets/sass/syfg/_grids.scss */
+/* line 52, ../../../resources/assets/sass/syfg/_grids.scss */
 .main-body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   float: left; }
-  /* line 49, ../../../resources/assets/sass/syfg/_grids.scss */
+  /* line 54, ../../../resources/assets/sass/syfg/_grids.scss */
   .main-body .sidebar {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -618,12 +621,7 @@ body.terhah {
     float: left;
     padding-left: 1.38889%;
     padding-right: 1.38889%; }
-    /* line 51, ../../../resources/assets/sass/syfg/_grids.scss */
-    .main-body .sidebar ul.main-menu {
-      list-style-type: none;
-      padding: 0;
-      margin: 0; }
-  /* line 60, ../../../resources/assets/sass/syfg/_grids.scss */
+  /* line 58, ../../../resources/assets/sass/syfg/_grids.scss */
   .main-body .main-content {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -632,8 +630,9 @@ body.terhah {
     float: right;
     padding-left: 1.38889%;
     padding-right: 1.38889%; }
-    /* line 62, ../../../resources/assets/sass/syfg/_grids.scss */
+    /* line 60, ../../../resources/assets/sass/syfg/_grids.scss */
     .main-body .main-content .inner-content {
+      font-size: 12px;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -643,14 +642,64 @@ body.terhah {
       padding-right: 1.38889%;
       margin-left: 16.66667%;
       text-align: justify; }
-      /* line 68, ../../../resources/assets/sass/syfg/_grids.scss */
-      .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition {
-        width: 100%; }
-        /* line 70, ../../../resources/assets/sass/syfg/_grids.scss */
-        .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition tr {
+      /* line 63, ../../../resources/assets/sass/syfg/_grids.scss */
+      .main-body .main-content .inner-content figure {
+        width: 100% !important;
+        height: auto;
+        margin: 0px;
+        padding-bottom: 50px; }
+        /* line 68, ../../../resources/assets/sass/syfg/_grids.scss */
+        .main-body .main-content .inner-content figure img {
+          width: 100%;
+          height: auto; }
+      /* line 73, ../../../resources/assets/sass/syfg/_grids.scss */
+      .main-body .main-content .inner-content img {
+        width: 100%;
+        height: auto; }
+      /* line 77, ../../../resources/assets/sass/syfg/_grids.scss */
+      .main-body .main-content .inner-content iframe {
+        width: 100% !important;
+        height: 400px; }
+      /* line 87, ../../../resources/assets/sass/syfg/_grids.scss */
+      .main-body .main-content .inner-content .list-exhibition .solo-exhibition h2.title, .main-body .main-content .inner-content .list-exhibition .group-exhibition h2.title {
+        font-size: 14px; }
+      /* line 90, ../../../resources/assets/sass/syfg/_grids.scss */
+      .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition, .main-body .main-content .inner-content .list-exhibition .group-exhibition table.exhibition {
+        width: 100%;
+        font-size: 12px; }
+        /* line 93, ../../../resources/assets/sass/syfg/_grids.scss */
+        .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition tr, .main-body .main-content .inner-content .list-exhibition .group-exhibition table.exhibition tr {
           text-decoration: none; }
+          /* line 95, ../../../resources/assets/sass/syfg/_grids.scss */
+          .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition tr td, .main-body .main-content .inner-content .list-exhibition .group-exhibition table.exhibition tr td {
+            vertical-align: top; }
+          /* line 99, ../../../resources/assets/sass/syfg/_grids.scss */
+          .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition tr td.year, .main-body .main-content .inner-content .list-exhibition .group-exhibition table.exhibition tr td.year {
+            width: 76px !important; }
+          /* line 102, ../../../resources/assets/sass/syfg/_grids.scss */
+          .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition tr td.title, .main-body .main-content .inner-content .list-exhibition .group-exhibition table.exhibition tr td.title {
+            width: 200px !important;
+            text-align: left; }
 
-/* line 21, ../../../resources/assets/sass/main.scss */
+/* line 1, ../../../resources/assets/sass/syfg/_navigations.scss */
+ul.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  /* line 5, ../../../resources/assets/sass/syfg/_navigations.scss */
+  ul.sidebar-menu li {
+    background-color: #EEEEEE;
+    color: #808080; }
+    /* line 8, ../../../resources/assets/sass/syfg/_navigations.scss */
+    ul.sidebar-menu li a {
+      text-decoration: none;
+      color: #808080; }
+  /* line 14, ../../../resources/assets/sass/syfg/_navigations.scss */
+  ul.sidebar-menu li.dropdown ul {
+    display: none;
+    margin: 0px; }
+
+/* line 22, ../../../resources/assets/sass/main.scss */
 body {
   background-color: #FFF; }
 

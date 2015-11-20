@@ -1,0 +1,19 @@
+ul.sidebar-menu{
+	list-style-type: none;
+	padding:0;
+	margin: 0;
+	li{
+		background-color: #EEEEEE;
+		color: #808080;
+		a{
+			text-decoration: none;
+			color: #808080;
+			}
+		}
+	li.dropdown{
+		ul{
+			display: none;
+			margin: 0px;
+		}
+	}
+}

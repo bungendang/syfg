@@ -137,14 +137,15 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        
+        Syfg\Providers\AppServiceProvider::class,
+        Syfg\Providers\AuthServiceProvider::class,
+        Syfg\Providers\EventServiceProvider::class,
+        Syfg\Providers\RouteServiceProvider::class,
+        Cyberduck\LaravelWpApi\LaravelWpApiServiceProvider::class,
 
 
     ],
@@ -195,6 +196,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+          'WpApi' => Cyberduck\LaravelWpApi\Facades\WpApi::class,
 
     ],
 

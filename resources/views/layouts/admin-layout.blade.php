@@ -4,8 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Syaiful Garibaldi - {{ $title or 'Personal Website' }}</title>
 	<link rel="stylesheet" href="/assets/css/main.css">
-	<script src="/assets/js/jquery.js"></script>
-	<script src="/assets/js/main.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -20,18 +18,9 @@
 	<div class="main-body">
 	<div class="sidebar">
 	@section('sidebar')	
-    	<ul class="sidebar-menu" id="sidebarMenu">
-    		<li><a href="/en/terhah-lang">TERHAH LANGUAGE</a></li>
-    		<li class="dropdown" id="dropdown">WORKS
-				<ul>
-					@for ($i = 0; $i < $countKarya; $i++)
-<li><a href="/en/works/{{$karya[$i]['slug']}}">{{$karya[$i]['judul']}}</a></li>
-					@endfor	
-				</ul>
-    		</li>
-    		<li><a href="/en/bio">BIO</a></li>
-    		<li><a href="/en/publication">PUBLICATION</a></li>
-    		<li><a href="/en/contact">CONTACT</a></li>
+    	<ul class="main-menu">
+    		<li><a href="/admin/translate">Terhah Translate</a></li>
+    		<li><a href="/admin/drive">Terhah Drive</a></li>
     	</ul>
     @show
     </div>

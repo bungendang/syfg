@@ -26,4 +26,9 @@ elixir(function(mix) {
 	    http_path: false,
 	    generated_images_path: false
 	});
+	mix.scripts([
+        'main.js'
+    ],'public/assets/js/main.js');
+    mix.copy('node_modules/jquery/dist/jquery.js', 'public/assets/js/jquery.js');
 });
+

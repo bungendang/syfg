@@ -1,4 +1,4 @@
-@extends('layouts.en-layout',['title' => $data->title->rendered])
+@extends('layouts.en-layout',['title' => $data->title])
 
 @section('sidebar')
     @parent
@@ -6,5 +6,8 @@
 @endsection
 
 @section('content')
-     {{$data->title->rendered}}
+	<div class="inner-content">
+    	<h2>{{$data->title}}</h2>
+     <?php echo $data->content ?>		
+	</div>
 @endsection

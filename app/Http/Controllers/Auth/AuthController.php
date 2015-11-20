@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Syfg\Http\Controllers\Auth;
 
-use App\User;
+use Syfg\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use Syfg\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -28,6 +28,8 @@ class AuthController extends Controller
      *
      * @return void
      */
+    protected $redirectPath = 'admin';
+    protected $loginPath = 'login';
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
@@ -39,6 +41,7 @@ class AuthController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -61,5 +64,12 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function getLogin(){
+        return view('admin/login');
+    }
+    public function getRegister(){
+        return view('admin/register');
     }
 }
