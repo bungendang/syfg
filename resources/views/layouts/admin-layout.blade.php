@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Syaiful Garibaldi - {{ $title or 'Administrator Page' }}</title>
-	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
 	<div class="header">

@@ -29,6 +29,8 @@ elixir(function(mix) {
 	mix.scripts([
         'main.js'
     ],'public/assets/js/main.js');
+    mix.sass('app.scss')
+        .browserify('app.js');
     mix.copy('node_modules/jquery/dist/jquery.js', 'public/assets/js/jquery.js');
 });
 
