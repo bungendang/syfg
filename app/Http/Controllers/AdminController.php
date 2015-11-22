@@ -27,4 +27,8 @@ class AdminController extends Controller
     {
         return view('admin/drive');
     }
+    public function postUpload()
+    {
+        return 'test upload file';
+    }
 }

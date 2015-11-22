@@ -2,9 +2,9 @@
 
 @section('sidebar')
     @parent
-
+	folder list
 @endsection
 
 @section('content')
-    <p>Terhah Drive</p>
+    <p>File List</p>
 @endsection

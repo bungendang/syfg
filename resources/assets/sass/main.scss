@@ -9,13 +9,13 @@ $susy: (
   columns: 12,
   gutters: 1/2,
   math: fluid,
-  container: 1100px,
+  container: 1210px,
   container-position: center,
   output: float,
   gutter-position: inside,
 );
 ///end setting susy
-
+@import "syfg/variables";
 @import "syfg/grids";
 @import "syfg/navigations";
 

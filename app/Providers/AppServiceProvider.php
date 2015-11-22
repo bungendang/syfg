@@ -13,6 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        view()->composer('*', function ($view) {
+            $current_route_name = \Request::route()->getName();
+            $view->with('current_route_name', $current_route_name);
+        });
         $url = 'http://wptepu.dev/wp-json/posts?filter[posts_per_page]=-1&filter[category_name]=karya';
         $json = file_get_contents($url);
         $query = json_decode($json);
@@ -26,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
         }
         $countKarya = count($karya);
         view()->share(['karya'=>$karya,'countKarya'=>$countKarya]);
+
+
     }
 
     /**

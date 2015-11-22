@@ -1,53 +1,23 @@
-@font-face {
-    font-family:"terhahFont";
-    src: url("/assets/fonts/agencyr.eot") /* EOT file for IE */
-}
+
 @font-face {
     font-family:"terhahFont";
     src: url("/assets/fonts/terhahFontRegular.ttf") /* TTF file for CSS3 browsers */
 }
 
+
+body{
+	font-family: $fontTypeStandard;
+	color: $fontColor;
+}
 body.terhah{
 	font-family:'terhahFont';
 }
-body{
-	font-family: Tahoma, Geneva, sans-serif;
+.container{
+	@include container();
 }
-
 .header{
+	padding:20px 0px;
 	@include span(12 nest);
-	background-color: #FFF;
-	.logos{
-		@include span(3 first);
-		//background-color: #EEEEEE;
-		font-size:18px;
-		//font-weight: bold;
-	}
-	.lang-mn{
-		@include span(3 last);
-		//background-color: #CCCCCC;
-		text-align: center;
-		ul.inline{
-			list-style-type: none;
-			padding: 0;
-			margin:0;
-			li:before{
-				content: " | ";
-			}
-			li:first-child:before{
-				content:none;
-			}
-			li{
-				display: inline;
-			}
-			li.en{
-			font-family: "Trebuchet MS", Helvetica, sans-serif;				
-			}
-			li.th{
-			font-family:'terhahFont';
-			}
-		}
-	}
 }
 .main-body{
 	@include span(12 nest);
@@ -68,6 +38,9 @@ body{
 				img{
 					width: 100%;
 					height: auto;
+				}
+				figcaption{
+					font-style: italic;
 				}
 			}
 			img{

@@ -75,4 +75,7 @@ class EnglishController extends Controller
     public function publication(){
         return view('en/publication');
     }
+    public function contact(){
+        return view('en/contact');
+    }
 }

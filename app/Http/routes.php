@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 
 Route::group(['prefix'=>'en'],function(){
-	Route::get('/', 'EnglishController@index');
-	Route::get('/terhah-lang', 'EnglishController@terhahLang');
-	Route::get('/works','EnglishController@works');
-	Route::get('/works/{slug}','EnglishController@worksTitle');
-	Route::get('/bio','EnglishController@bio');
-	Route::get('/publication','EnglishController@publication');
+	Route::get('/', ['as'=>'en.index', 'uses'=>'EnglishController@index'] );
+	Route::get('/terhah-lang', ['as'=>'en.terhah-lang','uses'=>'EnglishController@terhahLang'] );
+	Route::get('/works', ['as'=>'en.works', 'uses'=>'EnglishController@works']);
+	Route::get('/works/{slug}',['as'=>'en.worksub','uses'=>'EnglishController@worksTitle'] );
+	Route::get('/bio',['as'=>'en.bio','uses'=>'EnglishController@bio']);
+	Route::get('/publication',['as'=>'en.publication','uses'=>'EnglishController@publication']);
+	Route::get('/contact',['as'=>'en.contact','uses'=>'EnglishController@contact']);
 });
 
 Route::group(['prefix'=>'admin'], function(){

@@ -1,19 +1,81 @@
+.navigation{
+	@include span(12 nest);
+	background-color: #FFF;
+	color: $fontColor;
+	.logos{
+		@include span(3 first);
+		//background-color: #EEEEEE;
+		font-size:18px;
+		//font-weight: bold;
+	}
+	.lang-mn{
+		@include span(3 last);
+		//background-color: #CCCCCC;
+		text-align: right;
+		ul.inline{
+			list-style-type: none;
+			padding: 0;
+			margin:0;
+			li{
+				a{
+					color: $fontColor;
+					text-decoration: none;
+				}
+			}
+			li:before{
+				content: " | ";
+			}
+			li:first-child:before{
+				content:none;
+			}
+			li{
+				display: inline;
+			}
+			li.en{
+				
+			}
+			li.th{
+			font-family:'terhahFont';
+			}
+		}
+	}
+}
 ul.sidebar-menu{
 	list-style-type: none;
 	padding:0;
 	margin: 0;
 	li{
-		background-color: #EEEEEE;
+		cursor: pointer;
+		//background-color: #EEEEEE;
 		color: #808080;
+		//font-weight: bold;
 		a{
 			text-decoration: none;
 			color: #808080;
-			}
 		}
+		a.active{
+			text-decoration: underline !important;				
+		}
+
+	}
 	li.dropdown{
+
 		ul{
 			display: none;
 			margin: 0px;
+			padding:0;
+			li{
+				list-style-type:none;
+				padding:0;
+				margin: 0;
+				font-size: 12px;
+				font-weight: normal;
+			}
+		}
+	}
+	li.dropdown.display{
+		ul{
+			display: block;
 		}
 	}
 }

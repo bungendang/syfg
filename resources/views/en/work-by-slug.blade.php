@@ -7,7 +7,7 @@
 
 @section('content')
 	<div class="inner-content">
-    	<h2>{{$data->title}}</h2>
+    	<!--h2>{{$data->title}}</h2-->
      <?php echo $data->content ?>		
 	</div>
 @endsection
