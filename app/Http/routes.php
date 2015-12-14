@@ -11,25 +11,47 @@
 |
 */
 
-Route::get('/', function () {
-    return view('th/home');
-});
-
-
-Route::group(['prefix'=>'en'],function(){
-	Route::get('/', ['as'=>'en.index', 'uses'=>'EnglishController@index'] );
-	Route::get('/terhah-lang', ['as'=>'en.terhah-lang','uses'=>'EnglishController@terhahLang'] );
-	Route::get('/works', ['as'=>'en.works', 'uses'=>'EnglishController@works']);
-	Route::get('/works/{slug}',['as'=>'en.worksub','uses'=>'EnglishController@worksTitle'] );
-	Route::get('/bio',['as'=>'en.bio','uses'=>'EnglishController@bio']);
-	Route::get('/publication',['as'=>'en.publication','uses'=>'EnglishController@publication']);
-	Route::get('/contact',['as'=>'en.contact','uses'=>'EnglishController@contact']);
-});
-
-Route::group(['prefix'=>'admin'], function(){
-	Route::get('/', ['middleware' => 'auth','uses'=>'AdminController@index','as'=>'admin']);
-	Route::get('/translate','AdminController@translate');
+Route::group(['domain' => 'admin.syfg.dev'], function () {
+    Route::get('/', ['middleware' => 'auth','uses'=>'AdminController@index','as'=>'admin']);
+	Route::get('/translate',['as'=>'admin.translate','uses'=>'AdminController@terhahGetAll']);
+	Route::get('/terhah/',['as'=>'admin.terhah','uses'=>'AdminController@terhahGetAll']);
+	Route::get('/terhah/add','AdminController@terhahGetAdd');
+	Route::post('/terhah/add','AdminController@terhahPostAdd');
+	Route::get('/edit/th/{id}','AdminController@getEditTerhahId');
+	Route::post('/edit/th/{id}','AdminController@postEditTerhahId');
+	Route::get('/delete/th/{id}','AdminController@deleteTerhahId');
 	Route::get('/drive','AdminController@drive');
+	Route::post('/drive','AdminController@drivePostUpload');
+	Route::get('/drive/upload',['as'=>'admin.getUploadFile','uses'=>'AdminController@driveGetUpload']);
+	Route::post('/drive/upload','AdminController@drivePostUpload');
+});
+
+Route::group(['domain'=>'api.syfg.dev'],function(){
+	Route::get('/v1/file',['as'=>'api.listFolder','uses'=>'ApiController@fileAll']);
+});
+
+
+
+
+Route::group(['domain' => 'syfg.dev'],function(){
+	Route::get('/', ['as'=>'th.index', 'uses'=>'TerhahController@index'] );
+	Route::get('/terhah-lang', ['as'=>'th.terhah-lang','uses'=>'TerhahController@terhahLang'] );
+	Route::get('/works', ['as'=>'th.works', 'uses'=>'TerhahController@works']);
+	Route::get('/works/{slug}',['as'=>'th.worksub','uses'=>'TerhahController@worksTitle'] );
+	Route::get('/bio',['as'=>'th.bio','uses'=>'TerhahController@bio']);
+	Route::get('/publication',['as'=>'th.publication','uses'=>'TerhahController@publication']);
+	Route::get('/contact',['as'=>'th.contact','uses'=>'TerhahController@contact']);
+	
+	Route::group(['prefix'=>'en'],function(){
+		Route::get('/', ['as'=>'en.index', 'uses'=>'EnglishController@index'] );
+		Route::get('/terhah-lang', ['as'=>'en.terhah-lang','uses'=>'EnglishController@terhahLang'] );
+		Route::get('/works', ['as'=>'en.works', 'uses'=>'EnglishController@works']);
+		Route::get('/works/{slug}',['as'=>'en.worksub','uses'=>'EnglishController@worksTitle'] );
+		Route::get('/bio',['as'=>'en.bio','uses'=>'EnglishController@bio']);
+		Route::get('/publication',['as'=>'en.publication','uses'=>'EnglishController@publication']);
+		Route::get('/contact',['as'=>'en.contact','uses'=>'EnglishController@contact']);
+	});
+
 });
 
 Route::get('/login', ['uses'=>'Auth\AuthController@getLogin','as'=>'login']);

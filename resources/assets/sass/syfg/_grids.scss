@@ -16,7 +16,7 @@ body.terhah{
 	@include container();
 }
 .header{
-	padding:20px 0px;
+	padding:30px 0px;
 	@include span(12 nest);
 }
 .main-body{
@@ -82,8 +82,21 @@ body.terhah{
 					}
 				}
 			}
+			table.contact-table{
+				vertical-align: top;
+				.addr{
+					width: 150px;
+				}
+				.colon{
+					width: 10px;
+				}
+			}
 		}
+
 	}
+}
+.vat{
+	vertical-align: top;
 }
 .footer{
 	

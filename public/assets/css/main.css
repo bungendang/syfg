@@ -5,7 +5,7 @@
  * body `font-size` is set using `em` units.
  */
 @import url(https://fonts.googleapis.com/css?family=Poppins:500);
-/* line 106, ../../../../../../.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, ../../../../../.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
   line-height: 1.5em; }
@@ -560,7 +560,7 @@ body.terhah {
   max-width: 1210px;
   margin-left: auto;
   margin-right: auto; }
-  /* line 12, ../../../../../../.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/susy-2.2.5/sass/susy/output/support/_clearfix.scss */
   .container:after {
     content: " ";
     display: block;
@@ -568,7 +568,7 @@ body.terhah {
 
 /* line 18, ../../../resources/assets/sass/syfg/_grids.scss */
 .header {
-  padding: 20px 0px;
+  padding: 30px 0px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -653,6 +653,19 @@ body.terhah {
           .main-body .main-content .inner-content .list-exhibition .solo-exhibition table.exhibition tr td.title, .main-body .main-content .inner-content .list-exhibition .group-exhibition table.exhibition tr td.title {
             width: 200px !important;
             text-align: left; }
+      /* line 85, ../../../resources/assets/sass/syfg/_grids.scss */
+      .main-body .main-content .inner-content table.contact-table {
+        vertical-align: top; }
+        /* line 87, ../../../resources/assets/sass/syfg/_grids.scss */
+        .main-body .main-content .inner-content table.contact-table .addr {
+          width: 150px; }
+        /* line 90, ../../../resources/assets/sass/syfg/_grids.scss */
+        .main-body .main-content .inner-content table.contact-table .colon {
+          width: 10px; }
+
+/* line 98, ../../../resources/assets/sass/syfg/_grids.scss */
+.vat {
+  vertical-align: top; }
 
 /* line 1, ../../../resources/assets/sass/syfg/_navigations.scss */
 .navigation {
@@ -701,6 +714,9 @@ body.terhah {
       /* line 31, ../../../resources/assets/sass/syfg/_navigations.scss */
       .navigation .lang-mn ul.inline li {
         display: inline; }
+      /* line 34, ../../../resources/assets/sass/syfg/_navigations.scss */
+      .navigation .lang-mn ul.inline li.en {
+        font-family: "Poppins", sans-serif; }
       /* line 37, ../../../resources/assets/sass/syfg/_navigations.scss */
       .navigation .lang-mn ul.inline li.th {
         font-family: 'terhahFont'; }
@@ -737,7 +753,7 @@ ul.sidebar-menu {
   ul.sidebar-menu li.dropdown.display ul {
     display: block; }
 
-/* line 22, ../../../resources/assets/sass/main.scss */
+/* line 24, ../../../resources/assets/sass/main.scss */
 body {
   background-color: #FFF; }
 

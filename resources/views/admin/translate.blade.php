@@ -7,4 +7,5 @@
 
 @section('content')
     <p>Translate</p>
+    <a href="/terhah">Terhah</a>
 @endsection

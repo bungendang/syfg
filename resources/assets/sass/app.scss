@@ -1,7 +1,29 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);
-$font-family-sans-serif: 'Lato', sans-serif;
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "compass/utilities";
+@import "compass/css3";
+@import "susy";
+//setting susy
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  math: fluid,
+  container: 1210px,
+  container-position: center,
+  output: float,
+  gutter-position: inside,
+);
+///end setting susy
 
-.sidebar{
-	background-color: #EEEEEE;
+
+@font-face {
+    font-family:"terhahFont";
+    src: url("/assets/fonts/terhahFontRegular.ttf") /* TTF file for CSS3 browsers */
+}
+
+@import "syfg/admins";
+
+
+
+
+td.th{
+	font-family:'terhahFont';			
 }

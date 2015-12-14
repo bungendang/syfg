@@ -2,6 +2,6 @@
 
 return array(
 
-    'endpoint' => 'http://wptepu.dev/wp-json/',
+    'endpoint' => 'http://wp.syaifulgaribaldi.com/wp-json/',
     
 );

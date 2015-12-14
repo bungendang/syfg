@@ -26,11 +26,28 @@ elixir(function(mix) {
 	    http_path: false,
 	    generated_images_path: false
 	});
+    mix.compass('app.scss','public/css', {
+	    require: ['susy'],
+	    sass: "resources/assets/sass",
+	    font: "public/assets/fonts",
+	    image: "public/assets/images",
+	    javascript: "public/assets/js",
+	    sourcemap: true,
+	    comments: true,
+	    relative: true,
+	    http_path: false,
+	    generated_images_path: false
+	});
 	mix.scripts([
         'main.js'
     ],'public/assets/js/main.js');
-    mix.sass('app.scss')
-        .browserify('app.js');
+    
+    mix.browserify('app.js');
     mix.copy('node_modules/jquery/dist/jquery.js', 'public/assets/js/jquery.js');
+    mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/bootstrap.min.css');
+    mix.copy('node_modules/bootstrap/dist/fonts/', 'public/fonts');
+    mix.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/js/bootstrap.min.js');
+    mix.copy('bower_components/list.js/dist/list.min.js', 'public/js/list.min.js');
+    mix.copy('bower_components/jquery-form-validator/form-validator/jquery.form-validator.min.js', 'public/js/jquery.form-validator.min.js');
 });
 

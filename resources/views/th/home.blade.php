@@ -1,4 +1,4 @@
-@extends('layouts.th-layout')
+@extends('layouts.th-layout',['title' => 'Home'])
 
 @section('title', 'Home')
 
@@ -8,5 +8,5 @@
 @endsection
 
 @section('content')
-    <p>This is my body content.</p>
+    <p></p>
 @endsection

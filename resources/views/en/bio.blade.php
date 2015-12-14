@@ -7,8 +7,16 @@
 
 @section('content')
 	<div class="inner-content">
-    <p>Syaiful Garibaldi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, culpa voluptates est deserunt. Vel, libero. Vitae eius autem cum quas, possimus aliquid voluptate ducimus quos fugiat animi, quidem eveniet magnam nostrum, optio a obcaecati tempore! Culpa odit harum corporis eveniet, voluptatibus pariatur commodi praesentium libero, nostrum quibusdam alias dolorum ad? Quae consequuntur ipsum quidem dolorem ipsa neque? Dignissimos eaque illo ea iure, distinctio id dolorum!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fuga eaque omnis, deleniti maxime atque aut dolores inventore enim culpa. Optio, aut, eius? Explicabo harum, dignissimos reprehenderit, voluptas cumque repellat commodi voluptatum dolores velit vero minima inventore veritatis sed magni soluta temporibus! Eos ad perspiciatis hic ipsa ea saepe, sequi beatae dicta itaque odit vel quidem doloremque, earum, quibusdam! Culpa aspernatur provident omnis minima ipsam, ex facilis.</p>
+    <span>Born in Jakarta, July 16th 1985</span>
+    <br>
+    <span>Lives and works in Bandung, West Java, Indonesia</span>
+    <br>
+    <h3>Education</h3>
+    <span>MA Japan / UK</span>
+    <br>
+    <span>BFA Majoring Printmaking, Faculty of Art and Design, Bandung Institute of Technology (ITB), Bandung - Indonesia</span>
+    <br>
+    <span>Argonomy, Faculty of Agriculture, University of Padjajaran (UNPAD), Bandung - Indonesia</span>
     	<div class="list-exhibition">
     		<div class="solo-exhibition">
     			<h2 class="title">Solo Exhibition</h2>
@@ -39,7 +47,7 @@
 						<tr>
 							<td class="year">{{$tulis}}</td>
 							<td class="title">{{$solo[0]['judul']}}</td>
-							<td class="venue">{{ isset($info['venue']) ? $info['venue'] : '-'}}, {{ isset($info['kota']) ? $info['kota'] : ' - ' }}, {{ isset($info['negara']) ? $info['negara'] : ' - ' }}</td>
+							<td class="venue">{{ isset($info['venue']) ? $info['venue'] : ''}}{{ isset($info['venue']) ? ', ' : ''}}{{ isset($info['kota']) ? $info['kota'] : '' }}{{ isset($info['kota']) ? ', ' : '' }}{{ isset($info['negara']) ? $info['negara'] : '' }}{{ isset($info['negara']) ? '. ' : '' }}</td>
 						</tr>
                         
     				@endforeach
@@ -72,7 +80,7 @@
                         <tr>
                             <td class="year">{{$tulis}}</td>
                             <td class="title">{{$group[0]['judul']}}</td>
-                            <td class="venue">{{ isset($info['venue']) ? $info['venue'] : '-'}}, {{ isset($info['kota']) ? $info['kota'] : '-' }}, {{ isset($info['negara']) ? $info['negara'] : '-' }}</td>
+                            <td class="venue">{{ isset($info['venue']) ? $info['venue'] : ''}}{{ isset($info['venue']) ? ', ' : ''}}{{ isset($info['kota']) ? $info['kota'] : '' }}{{ isset($info['kota']) ? ', ' : '' }}{{ isset($info['negara']) ? $info['negara'] : '' }}{{ isset($info['negara']) ? '. ' : '' }}</td>
                         </tr>
                         <?php 
                             unset($info);

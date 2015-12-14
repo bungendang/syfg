@@ -23,7 +23,7 @@ class EnglishController extends Controller
     }
     public function works(Request $request)
     {
-    	$url = 'http://wptepu.dev/wp-json/posts?filter[posts_per_page]=-1&filter[category_name]=karya';
+    	$url = 'http://wp.syaifulgaribaldi.com/wp-json/posts?filter[posts_per_page]=-1&filter[category_name]=karya';
     	$json = file_get_contents($url);
     	$query = json_decode($json);
     	//var_dump($query[0]->date);
@@ -45,7 +45,7 @@ class EnglishController extends Controller
     	return view('en/works');
     }
     public function worksTitle($slug){
-    	$url = 'http://wptepu.dev/wp-json/posts?filter[name]='.$slug;
+    	$url = 'http://wp.syaifulgaribaldi.com/wp-json/posts?filter[name]='.$slug;
     	$json = file_get_contents($url);
     	$query = json_decode($json);
     	//return $query;
@@ -73,7 +73,14 @@ class EnglishController extends Controller
         return view('en/bio')->with(['solos'=>$soloExh,'groups'=>$groupExh]);
     }
     public function publication(){
-        return view('en/publication');
+        $dataPublication = WpApi::category_posts('publication', -1);
+        $query = $dataPublication['results'];
+        foreach ($query as $key => $value) {
+            $customField = WpApi::postMeta($value['ID']);
+            $queryCustom = $customField['results'];
+            $publication[] = array('judul' => $value['title'],'tanggal'=>$value['date'], 'info'=>$queryCustom );
+        }
+        return view('en/publication')->with('publications' , $publication);
     }
     public function contact(){
         return view('en/contact');

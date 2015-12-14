@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
+    'url' => 'http://syaifulgaribaldi.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
+    'key' => env('APP_KEY', 'k2ivJ3rzmL3jghGM8ZRvPsPjxZul6wCA'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -196,7 +196,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-          'WpApi' => Cyberduck\LaravelWpApi\Facades\WpApi::class,
+        'WpApi' => Cyberduck\LaravelWpApi\Facades\WpApi::class,
 
     ],
 

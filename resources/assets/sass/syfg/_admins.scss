@@ -1,0 +1,78 @@
+body.dashboard{
+	//padding-top:50px;
+}
+.signin{
+	padding:100px 0px;
+	width: 400px;
+	margin:0 auto;
+}
+
+
+
+.main-body{
+	@include span(12 nest);
+}
+.sidebar{
+	background-color: #EEE;
+	.form-insert{
+		padding:10px 10px;
+		position: absolute;
+		top: 0;
+		width: 250px;
+	}
+}
+.terhah-nav{
+	padding:10px 0px;
+}
+.main-content{
+	background-color: #FFFFFF;
+}
+//custom sidebar
+#wrapper{
+	padding-left:0px;
+	transition: all 0.9s ease 0s;
+	#sidebar-wrapper{
+		padding-top:50px;
+		margin-left: -250px;
+		left:250px;
+		width:250px;
+		position: fixed;
+		top:50px;
+		height: 100%;
+		overflow-y: auto;
+		z-index:-1000;
+		transition:all 0.9s ease 0s;
+	}
+	#content-wrapper{
+		padding-top:50px;
+		width: 100%;
+		min-height: 100vh;
+		margin-bottom: -50px;
+		position: absolute;
+		background-color: #FFFFFF;
+		.content{
+			background-color: #FFF;
+		}
+	}
+}
+#wrapper.toggled{
+	padding-left: 250px;
+	#content-wrapper{
+		position: relative;
+		min-height: 100vh;
+		.content{
+			background-color: #FFF;
+		}
+	    //margin-right: -250px;
+	}
+}
+
+.edit-word{
+	//height: 100%;
+}
+
+
+
+.form-control.multiple{
+	margin-bottom:10px !important;
+}
