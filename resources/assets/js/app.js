@@ -13,11 +13,75 @@ $( document ).ready(function() {
     	valueNames: ['terhah','indo','eng']
     };
     var wordList = new List('words',options);
-            $('#confirm-delete').on('show.bs.modal', function(e) {
-            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-            
-            $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
-        });    
+
+//confirm delete
+    $('#confirm-delete').on('show.bs.modal', function(e) {
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+        $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+    });    
+//end
+//add field indonesian word (edit page)
+    var counter = 0;
+    var limit = 5;
+    function addField(){
+
+    }
+
+     $("#indoAdd").click(function(e) {
+        $(".entryIndo").toggleClass("show");
+     });
+    $("#englishAdd").click(function(e) {
+        $(".entryEng").toggleClass("show");
+     });
+
+    $(document).on('click', '.btn-add', function(e)
+    {
+       // console.log('heheh');
+        e.preventDefault();
+
+        var controlForm = $('.controls div:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+        $(this).parents('.entry:first').remove();
+
+        e.preventDefault();
+        return false;
+    });
+
+     $(document).on('click', '.btn-add-eng', function(e)
+    {
+       // console.log('heheh');
+        e.preventDefault();
+
+        var controlForm = $('.engcontrols div:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add-eng')
+            .removeClass('btn-add-eng').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+        $(this).parents('.entry:first').remove();
+
+        e.preventDefault();
+        return false;
+    });
+
+
+
+
+
 });
 
 

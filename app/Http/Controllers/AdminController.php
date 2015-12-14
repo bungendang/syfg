@@ -206,16 +206,85 @@ class AdminController extends Controller
         $terhah->spelling = $request->spelling;
         $terhah->save();
   // return $request->all();
+
+        //update data dari kata indonesia yang sudah diimput sebelumnya
         foreach ($request->indonesian as $key => $indo) {
-            var_dump($key);
+            //var_dump($key);
             $update = Indonesian::find($key);
             $update->word = $indo;
             $update->save();
         }
+        //end
+
+        //update data dari kata english yang sudah diimput sebelumnya
+        foreach ($request->english as $key => $eng) {
+            //var_dump($key);
+            $update = English::find($key);
+            $update->word = $eng;
+            $update->save();
+        }
+        //end
+
+        //tambah arti kata baru indonesian
+        foreach ($request->indoFields as $key => $newIndo) {
+            echo $newIndo;
+            $check = Indonesian::where('word',$newIndo)->first();
+            if ($check === null) {
+                //echo 'kata tersebut belum ada';
+                $addNewIndo = new Indonesian;
+                $addNewIndo->word = $newIndo;
+                $addNewIndo->save();
+                $addNewThtoId = new ThtoId;
+                $addNewThtoId->terhah_id = $id;
+                $addNewThtoId->indonesian_id = $addNewIndo->id;
+                $addNewThtoId->save();
+            } elseif($newIndo == ''){
+               // echo 'kata itu sudah ada';
+                //echo $addNewIndo->get() ;
+                echo 'isinya kosong';
+
+            } else{
+                $existingData = Indonesian::where('word','=',$newIndo)->first();
+                $addNewThtoId = new ThtoId;
+                $addNewThtoId->terhah_id = $id;
+                $addNewThtoId->indonesian_id = $existingData->id;
+                $addNewThtoId->save();
+                var_dump($existingData->id);
+            }
+        }
+        //end
+        //tambah arti kata baru english
+        foreach ($request->engFields as $key => $newEng) {
+//            echo $newIndo;
+            $check = English::where('word',$newEng)->first();
+            if ($check === null) {
+                echo 'kata tersebut belum ada';
+                $addNewIndo = new English;
+                $addNewIndo->word = $newEng;
+                $addNewIndo->save();
+                $addNewThtoId = new ThtoEn;
+                $addNewThtoId->terhah_id = $id;
+                $addNewThtoId->english_id = $addNewIndo->id;
+                $addNewThtoId->save();
+            } elseif ($newEng == ''){
+                echo 'isinya kosong';
+            }else{
+                echo 'inggris kata itu sudah ada';
+                //echo $addNewIndo->get() ;
+                $existingData = English::where('word','=',$newEng)->first();
+                $addNewThtoId = new ThtoEn;
+                $addNewThtoId->terhah_id = $id;
+                $addNewThtoId->english_id = $existingData->id;
+                $addNewThtoId->save();
+                var_dump($existingData->word);                
+            }
+        }
+        //end
+
         //$indo = Indonesian::find();     
 
-        //return 'data updated';
-        return back()->withInput();
+     //   return 'data updated';
+      //  return back()->withInput();
     }
     public function deleteTerhahId($id){
 
@@ -243,5 +312,33 @@ class AdminController extends Controller
 
         //return 'kata terhah sudah di hapus';
         return redirect()->route('admin.terhah');
+    }
+     public function deleteIndonesianId($id, $thid){
+
+//hapus di table terhah
+        //$indonesian = Indonesian::find($id);
+        //$indonesian->delete();
+//end
+
+//hapus di table thtoina
+        $th_to_ina = ThtoId::where('indonesian_id',$id)->where('terhah_id',$thid)->delete();
+//end
+
+        //return 'kata terhah sudah di hapus';
+        return back()->withInput();
+    }
+     public function deleteEnglishId($id, $thid){
+
+//hapus di table terhah
+        //$indonesian = English::find($id);
+        //$indonesian->delete();
+//end
+
+//hapus di table thtoina
+        $th_to_ina = ThtoEn::where('english_id',$id)->where('terhah_id',$thid)->delete();
+//end
+
+        //return 'kata terhah sudah di hapus';
+        return back()->withInput();
     }
 }

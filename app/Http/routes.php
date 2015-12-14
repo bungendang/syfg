@@ -20,6 +20,8 @@ Route::group(['domain' => 'admin.syfg.dev'], function () {
 	Route::get('/edit/th/{id}','AdminController@getEditTerhahId');
 	Route::post('/edit/th/{id}','AdminController@postEditTerhahId');
 	Route::get('/delete/th/{id}','AdminController@deleteTerhahId');
+	Route::get('/delete/id/{id}/{thid}','AdminController@deleteIndonesianId');
+	Route::get('/delete/en/{id}/{thid}','AdminController@deleteEnglishId');
 	Route::get('/drive','AdminController@drive');
 	Route::post('/drive','AdminController@drivePostUpload');
 	Route::get('/drive/upload',['as'=>'admin.getUploadFile','uses'=>'AdminController@driveGetUpload']);

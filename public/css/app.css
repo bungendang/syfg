@@ -76,6 +76,10 @@
 .form-control.multiple {
   margin-bottom: 10px !important; }
 
+/* line 79, ../../resources/assets/sass/syfg/_admins.scss */
+.btn.multiple {
+  margin-bottom: 10px !important; }
+
 /* line 27, ../../resources/assets/sass/app.scss */
 td.th {
   font-family: 'terhahFont'; }
