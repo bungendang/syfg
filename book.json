@@ -5,5 +5,10 @@
         "tocstyles",
         "versions"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "toc": {
+            "addClass": true,
+            "className": "toc"
+        }
+    }
 }
