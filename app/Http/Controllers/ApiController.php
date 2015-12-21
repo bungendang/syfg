@@ -13,8 +13,4 @@ class ApiController extends Controller
     {
         return 'all file';
     }
-    public function getTerhahId()
-    {
-    	
-    }
 }

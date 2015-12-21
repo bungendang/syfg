@@ -8,6 +8,8 @@
 @section('content')
 	<div class="inner-content">
     	<!--h2>{{$data->title}}</h2-->
-     <?php echo $data->content ?>		
+    	<div class="post-content">
+     <?php echo $data->content ?>		    		
+    	</div>	
 	</div>
 @endsection

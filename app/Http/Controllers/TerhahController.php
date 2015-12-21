@@ -52,6 +52,10 @@ class TerhahController extends Controller
         return view('th/work-by-slug')->with(['data'=>$query[0]]);
     }
     public function bio(){
+        $getBio = WpApi::page('bio');
+        $bio =  $getBio['results'];
+        //return $bio;
+        $contentBio = $bio[0]['content'];
         $dataSolo = WpApi::tag_posts('solo-exhibition');
         $dataGroup = WpApi::tag_posts('group-exhibition');
         
@@ -70,7 +74,7 @@ class TerhahController extends Controller
 
             $groupExh[] = array(['judul'=>$value['title'],'tahun'=>date('Y',strtotime($value['date'])),'tempat'=>$queryCustom]);
         }
-        return view('th/bio')->with(['solos'=>$soloExh,'groups'=>$groupExh]);
+        return view('th/bio')->with(['solos'=>$soloExh,'groups'=>$groupExh,'content'=>$contentBio]);
     }
     public function publication(){
         $dataPublication = WpApi::category_posts('publication', -1);
@@ -83,6 +87,9 @@ class TerhahController extends Controller
         return view('th/publication')->with('publications' , $publication);
     }
     public function contact(){
-        return view('th/contact');
+        $getContact = WpApi::page('contact');
+        $contact =  $getContact['results'];
+        $contentContact = $contact[0]['content'];
+        return view('th/contact')->with(['content'=>$contentContact]);
     }
 }

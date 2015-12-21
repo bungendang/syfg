@@ -69,7 +69,7 @@ class AdminController extends Controller
 
     public function terhahGetAll()
     {
-        $terhahs = Terhah::all();
+        $terhahs = Terhah::orderBy('word','asc')->get();
         $indonesian = Indonesian::all();
         $english = English::all();
         $thid = ThtoId::all();
@@ -284,7 +284,7 @@ class AdminController extends Controller
         //$indo = Indonesian::find();     
 
      //   return 'data updated';
-      //  return back()->withInput();
+        return back()->withInput();
     }
     public function deleteTerhahId($id){
 
