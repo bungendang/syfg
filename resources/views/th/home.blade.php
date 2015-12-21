@@ -8,5 +8,7 @@
 @endsection
 
 @section('content')
-    <p></p>
+    @foreach($upcomings as $upcoming)
+	{{$upcoming['title']}}
+    @endforeach
 @endsection

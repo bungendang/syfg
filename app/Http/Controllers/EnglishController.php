@@ -12,10 +12,11 @@ class EnglishController extends Controller
 {
     public function index()
     {
-//       $posts = WpApi::category_posts('karya');
- //      return $posts;
+        $getUpcoming = WpApi::category_posts('upcoming');
+        $upcoming = $getUpcoming['results'];
+
         
-	    return view('en/home');
+	    return view('en/home')->with('upcomings',$upcoming);
     }
     public function terhahLang()
     {
