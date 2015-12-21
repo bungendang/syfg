@@ -3,6 +3,7 @@
 namespace Syfg\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use WpApi;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,8 @@ class AppServiceProvider extends ServiceProvider
             $current_route_name = \Request::route()->getName();
             $view->with('current_route_name', $current_route_name);
         });
+        $data = WpApi::category_posts('karya', -1);
+        //return $data;
 //        $url = 'http://wp.syaifulgaribaldi.com/wp-json/posts?filter[posts_per_page]=-1&filter[category_name]=karya';
 //        $json = file_get_contents($url);
 //        $query = json_decode($json);
@@ -29,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 //            $karya[] = array('judul' => $query[$i]->title, 'slug'=>$query[$i]->slug );
 //        }
 //        $countKarya = count($karya);
-//        view()->share(['karya'=>$karya,'countKarya'=>$countKarya]);
+        view()->share(['karya'=>$data['results']]);
 
 
     }

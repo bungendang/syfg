@@ -15,7 +15,7 @@
 	<div class="header">
 		<div class="container">
 			<div class="navigation">
-				<div class="logos">SYAIFUL GARIBALDI</div>
+				<div class="logos"><a href="/">SYAIFUL GARIBALDI</a></div>
 				<div class="lang-mn">
 					<ul class="inline">
 						<li class="en"><a href="/en">ENGLISH</a></li>
@@ -33,9 +33,9 @@
 	    		<li><a href="/terhah-lang" class="{{ (\Request::route()->getName() == 'en.terhah-lang') ? 'active' : '' }}">TERHAH LANGUAGE</a></li>
 	    		<li class="dropdown {{ (\Request::route()->getName() == 'th.worksub') ? 'display' : '' }}" id="dropdown">WORKS
 					<ul>
-						@for ($i = 0; $i < $countKarya; $i++)				
-	<li><a href="/works/{{$karya[$i]['slug']}}" class="{{ Request::is('works/'.$karya[$i]['slug']) ? 'active' : '' }}">{{$karya[$i]['judul']}}</a></li>
-						@endfor	
+					@foreach($karya as $work)
+						<li><a href="/th/works/{{$work['slug']}}" class="{{ Request::is('th/works/'.$work['slug']) ? 'active' : '' }}">{{$work['title']}}</a></li>
+					@endforeach
 					</ul>
 	    		</li>
 	    		<li><a href="/bio" class="{{ (\Request::route()->getName() == 'en.bio') ? 'active' : '' }}">BIO</a></li>
