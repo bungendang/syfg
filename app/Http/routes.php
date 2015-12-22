@@ -28,8 +28,9 @@ Route::group(['domain' => 'admin.syfg.dev'], function () {
 	Route::post('/drive/upload','AdminController@drivePostUpload');
 });
 
-Route::group(['domain'=>'api.syfg.dev'],function(){
-	Route::get('/v1/file',['as'=>'api.listFolder','uses'=>'ApiController@fileAll']);
+Route::group(['domain'=>'admin.syfg.dev'],function(){
+	Route::get('/api/v1/file',['as'=>'api.listFolder','uses'=>'ApiController@fileAll']);
+	Route::post('/api/v1/upload',['as'=>'api.uploadFile','uses'=>'ApiController@uploadFile']);
 });
 
 

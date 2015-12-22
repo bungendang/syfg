@@ -12,6 +12,14 @@ body{
 body.terhah{
 	font-family:'terhahFont';
 }
+/* line 15, ../../../resources/assets/sass/syfg/_grids.scss */
+a {
+  color: #808080;
+  text-decoration: none; }
+
+/* line 19, ../../../resources/assets/sass/syfg/_grids.scss */
+a:hover {
+  color: $hoverLinkColor; }
 .container{
 	@include container();
 }
@@ -51,34 +59,43 @@ body.terhah{
 				width: 100% !important;
 				height: 400px;
 			}
+
 			//end works page
 			@include span(8 of 12);
 			@include push(2);
 			text-align: justify;
+			.post-content{
+				text-align: justify;
+			}
+			ul.publication-list{
+				margin: 0px;
+				padding:0px;
+				li{
+					list-style: none;
+					padding-bottom:2.5em;
+				}
+			}
+			.post-contact-content{
+				p{
+					margin:0px 10px;
+				}
+			}
 			.list-exhibition{
 				.solo-exhibition,.group-exhibition{
 					h2.title{
 					font-size: 14px;
 					}
-					table.exhibition{
-						width: 100%;
-						font-size: 12px;
-						tr{
-							text-decoration: none;
-							td{
-								//padding:5px;
-								vertical-align: top;
-							}
-							td.year{
-								width: 76px !important;
-							}
-							td.title{
-								width: 200px !important;
-								text-align: left;
-							}
-							td.place-information{
-							}
-						}
+					ul.list-solo,ul.list-group{
+						padding: 0px;
+        				margin: 0px;
+        				li{
+        					list-style: none;
+          padding: 0px;
+        				}
+        				li.year{
+        					font-size: 14;
+          font-weight: bold;
+        				}
 					}
 				}
 			}

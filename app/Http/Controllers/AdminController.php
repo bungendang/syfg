@@ -34,13 +34,17 @@ class AdminController extends Controller
     }
     public function drive()
     {
-        return view('admin/drive');
+        $getFile = Files::all();
+        //return $getFile;
+        return view('admin/drive')->with('files',$getFile);
     }
 
     public function driveGetUpload()
     {
 //        return 'Upload file';
-        return view('admin/upload-file');
+        $getFile = Files::all();
+        return $getFile;
+        //return view('admin/upload-file');
     }
     public function drivePostUpload(Request $request)
     {
@@ -60,7 +64,7 @@ class AdminController extends Controller
         $file->save();
         //endinput
         //return $request;
-        return redirect()->route('admin.getUploadFile');
+        //return redirect()->route('admin.getUploadFile');
         return 'test upload file';
     }
 

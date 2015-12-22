@@ -22,6 +22,7 @@ elixir(function(mix) {
 	    javascript: "public/assets/js",
 	    sourcemap: true,
 	    comments: true,
+	    style:"compressed",
 	    relative: true,
 	    http_path: false,
 	    generated_images_path: false

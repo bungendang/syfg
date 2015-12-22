@@ -7,7 +7,7 @@
 
 @section('content')
 	<div class="inner-content">
-          <div class="post-content">
+          <div class="post-contact-content">
                <?php echo $content ?>
           </div>
 	</div>
