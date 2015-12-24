@@ -23,16 +23,13 @@ Route::group(['domain' => 'admin.syfg.dev'], function () {
 	Route::get('/delete/id/{id}/{thid}','AdminController@deleteIndonesianId');
 	Route::get('/delete/en/{id}/{thid}','AdminController@deleteEnglishId');
 	Route::get('/drive','AdminController@drive');
-	Route::post('/drive','AdminController@drivePostUpload');
+	Route::post('/drive','ApiController@postUploadFile');
 	Route::get('/drive/upload',['as'=>'admin.getUploadFile','uses'=>'AdminController@driveGetUpload']);
 	Route::post('/drive/upload','AdminController@drivePostUpload');
-});
-
-Route::group(['domain'=>'admin.syfg.dev'],function(){
 	Route::get('/api/v1/file',['as'=>'api.listFolder','uses'=>'ApiController@fileAll']);
-	Route::post('/api/v1/upload',['as'=>'api.uploadFile','uses'=>'ApiController@uploadFile']);
+	Route::get('/api/v1/upload',['as'=>'uploadFile.get','uses'=>'ApiController@getUploadFile']);
+	Route::post('/api/v1/upload',['as'=>'uploadFile.post','uses'=>'ApiController@postUploadFile']);
 });
-
 
 
 

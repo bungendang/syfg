@@ -77,7 +77,22 @@ $( document ).ready(function() {
         e.preventDefault();
         return false;
     });
-
+$("#uploadBtn").click(function(){
+$.ajax({
+      url:'/drive',
+      data:{
+        logo:new FormData($("#fileUploadForm")[0]),
+        },
+      dataType:'json',
+      async:false,
+      type:'post',
+      processData: false,
+      contentType: false,
+      success:function(response){
+        console.log(response);
+      },
+    });
+ });
 
 
 

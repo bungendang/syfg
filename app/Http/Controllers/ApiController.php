@@ -13,15 +13,16 @@ class ApiController extends Controller
 {
     public function fileAll()
     {
-        return 'all file';
+        return view('admin/test');
     }
-    public function uploadFile(Request $request){
+    public function postUploadFile(Request $request){
     	$extension = $request->file('file')->getClientOriginalExtension();
         $filename = md5($request->file('file')->getClientOriginalName() . time()).'.'.$extension;
             //$filename->move('files',$filename);
         $destinationPath = 'files';
         $request->file('file')->move($destinationPath, $filename);
         
+        //return $extension;
         $file = new Files;
         $file->title = $request->title;
         $file->url = '/'.$destinationPath.'/'.$filename;

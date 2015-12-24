@@ -34,7 +34,7 @@
 	    		<li class="dropdown {{ (\Request::route()->getName() == 'th.worksub') ? 'display' : '' }}" id="dropdown">WORKS
 					<ul>
 					@foreach($karya as $work)
-						<li><a href="/th/works/{{$work['slug']}}" class="{{ Request::is('th/works/'.$work['slug']) ? 'active' : '' }}">{{$work['title']}}</a></li>
+						<li><a href="/works/{{$work['slug']}}" class="{{ Request::is('th/works/'.$work['slug']) ? 'active' : '' }}">{{$work['title']}}</a></li>
 					@endforeach
 					</ul>
 	    		</li>

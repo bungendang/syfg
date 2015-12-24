@@ -1,8 +1,9 @@
 @extends('layouts.admin-layout',['title' => 'Dashboard'])
 
 @section('sidebar')
+
     <div class="form-insert">
-      <form action="/api/v1/upload/" method="POST" enctype="multipart/form-data">
+      <form method="POST" enctype="multipart/form-data" action="" id="fileUploadForm" >
       {{ csrf_field() }}
         <div class="form-group">
           <label for="title">Title</label>
@@ -18,9 +19,11 @@
           <input type="file" name="file" id="file">
         </div>
         <div class="text-right">
-        <button class="btn btn-default">Upload</button>  
+        <input type="submit" value="Upload" class="btn btn-default" id="uploadBtn" onclick="uploadFile()">
         </div>
-        
+        <progress id="progressBar" value="0" max="100"></progress>
+        <h3 id="status"></h3>
+        <p id="loaded_n_total"></p>
       </form>
     </div>
 @endsection
