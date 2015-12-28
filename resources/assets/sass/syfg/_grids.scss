@@ -30,12 +30,25 @@ a:hover {
 .main-body{
 	@include span(12 nest);
 	.sidebar{
+
+		@include span(12);
+		@include susy-breakpoint($tablet){
 		@include span(3 first);
-		
+
+		}
 	}
 	.main-content{
-		@include span(9 last);
+		@include span(12);
+		@include susy-breakpoint($tablet){
+			@include span(9 last);			
+		}
+
+		margin-bottom:2em;
 		.inner-content{
+			//padding-top:50px;
+			@include susy-breakpoint($tablet){
+				padding-top:0;
+			}
 			//works page
 			font-size: 12px;
 			figure{
@@ -49,6 +62,10 @@ a:hover {
 				}
 				figcaption{
 					font-style: italic;
+					text-align: center;
+					@include susy-breakpoint($tablet){
+						text-align: left;
+					}
 				}
 			}
 			img{

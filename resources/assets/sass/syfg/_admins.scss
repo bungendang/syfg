@@ -21,7 +21,7 @@ body.dashboard{
 		width: 250px;
 	}
 }
-.terhah-nav{
+.terhah-nav,.drive-nav{
 	padding:10px 0px;
 }
 .main-content{
@@ -71,6 +71,16 @@ body.dashboard{
 	//height: 100%;
 }
 
+table.files{
+	tbody{
+		tr{
+			td{
+				vertical-align: middle;
+
+			}
+		}		
+	}
+}
 
 
 .form-control.multiple{

@@ -26,7 +26,7 @@
     width: 250px; }
 
 /* line 24, ../../resources/assets/sass/syfg/_admins.scss */
-.terhah-nav {
+.terhah-nav, .drive-nav {
   padding: 10px 0px; }
 
 /* line 27, ../../resources/assets/sass/syfg/_admins.scss */
@@ -72,11 +72,15 @@
     #wrapper.toggled #content-wrapper .content {
       background-color: #FFF; }
 
-/* line 76, ../../resources/assets/sass/syfg/_admins.scss */
+/* line 77, ../../resources/assets/sass/syfg/_admins.scss */
+table.files tbody tr td {
+  vertical-align: middle; }
+
+/* line 86, ../../resources/assets/sass/syfg/_admins.scss */
 .form-control.multiple {
   margin-bottom: 10px !important; }
 
-/* line 79, ../../resources/assets/sass/syfg/_admins.scss */
+/* line 89, ../../resources/assets/sass/syfg/_admins.scss */
 .btn.multiple {
   margin-bottom: 10px !important; }
 

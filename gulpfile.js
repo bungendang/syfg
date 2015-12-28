@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
 require('laravel-elixir-sass-compass');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -42,13 +43,16 @@ elixir(function(mix) {
 	mix.scripts([
         'main.js'
     ],'public/assets/js/main.js');
-    
+    mix.scripts([
+        'jquery.form-validator.min.js','list.min.js','clipboard.min.js'
+    ],'public/js/scripts.js');
     mix.browserify('app.js');
     mix.copy('node_modules/jquery/dist/jquery.js', 'public/assets/js/jquery.js');
     mix.copy('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/bootstrap.min.css');
     mix.copy('node_modules/bootstrap/dist/fonts/', 'public/fonts');
     mix.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/js/bootstrap.min.js');
-    mix.copy('bower_components/list.js/dist/list.min.js', 'public/js/list.min.js');
-    mix.copy('bower_components/jquery-form-validator/form-validator/jquery.form-validator.min.js', 'public/js/jquery.form-validator.min.js');
+    mix.copy('bower_components/list.js/dist/list.min.js', 'resources/assets/js/list.min.js');
+    mix.copy('bower_components/jquery-form-validator/form-validator/jquery.form-validator.min.js', 'resources/assets/js/jquery.form-validator.min.js');
+    mix.copy('bower_components/clipboard/dist/clipboard.min.js', 'public/js/clipboard.min.js');
 });
 

@@ -1,57 +1,145 @@
 .navigation{
 	@include span(12 nest);
+	height: 50px;
 	background-color: #FFF;
 	color: $fontColor;
+	position: relative;
 	.logos{
-		@include span(3 first);
-		//background-color: #EEEEEE;
-		font-size:18px;
-		//font-weight: bold;
+		@include span(8);
+		@include push(2);
+		text-align: center;
+			@include vertical-align();
+		a{
+
+		}
+		font-size: 1.5em;
+		@include susy-breakpoint($tablet){
+			text-align: left;
+			font-size: 1em;
+			@include span(3 first);
+			@include push(0);
+			//background-color: #EEEEEE;
+			font-size:18px;
+			//font-weight: bold;			
+		}
+
+	}
+	.toggle-menu{
+		@include span(2 last);
+		@include push(10);
+		text-align: center;
+		@include vertical-align();
+		@include susy-breakpoint($tablet){
+			display: none;
+		}
+		.btn{
+			height: 30px;
+			width: 30px;
+			border-radius: 5px;
+		}
+		.btn-default{
+			border:1px solid #cccccc;
+			background-color: #FFF;
+		}
 	}
 	.lang-mn{
-		@include span(3 last);
+		@include span(12);
+		//display: none;
+		font-size: 0.5em;
+		position: absolute;
+		top:-30px;
+		@include susy-breakpoint($tablet){
+			@include span(3 last);
+				font-size: 1em;
+				position: relative;
+				height: 100%;
+				top:0px;
+			}
+		.inner-lang-mn{
 		//background-color: #CCCCCC;
-		text-align: right;
-		ul.inline{
-			list-style-type: none;
-			padding: 0;
-			margin:0;
-			li{
-				a{
-					color: $fontColor;
-					text-decoration: none;
+			float:right;
+			ul.inline{
+				list-style-type: none;
+				padding: 0;
+				margin:0;
+				li{
+					a{
+						color: $fontColor;
+						text-decoration: none;
+					}
+				}
+				li:before{
+					content: " | ";
+				}
+				li:first-child:before{
+					content:none;
+				}
+				li{
+					display: inline;
+									a{
+						color: #808080;
+	        			text-decoration: none;
+					}
+					a:hover{
+						  color: $hoverLinkColor;
+					}
+				}
+				li.en{
+					font-family: $fontTypeStandard;	
+				}
+				li.th{
+				font-family:'terhahFont';
 				}
 			}
-			li:before{
-				content: " | ";
-			}
-			li:first-child:before{
-				content:none;
-			}
-			li{
-				display: inline;
-								a{
-					color: #808080;
-        			text-decoration: none;
+			@include susy-breakpoint($tablet){
+				@include vertical-align();
+				position: relative;
+				ul.inline{
+					text-align: right;
+					li.en,li.th{
+						display: inline;
+						a{
+							
+						}
+
+					}				
 				}
-				a:hover{
-					  color: $hoverLinkColor;
-				}
-			}
-			li.en{
-				font-family: $fontTypeStandard;	
-			}
-			li.th{
-			font-family:'terhahFont';
-			}
+
+			}			
 		}
+
+
+		
+	}
+}
+#mainMenu{
+	display:none;
+	@include susy-breakpoint($tablet){
+		display: block;
+	}
+}
+#mainMenu.show{
+	display:block;
+	ul.sidebar-menu{
+	padding-bottom:50px !important;	
+	margin-bottom:20px !important;	
 	}
 }
 ul.sidebar-menu{
+	border-bottom:1px solid $fontColor;	
+	@include susy-breakpoint($tablet){
+		border:none;
+		display: block;
+		padding-bottom:0;	
+	}
 	list-style-type: none;
 	padding:0;
 	margin: 0;
 	li{
+		text-align: center;
+		@include susy-breakpoint($tablet){
+			text-align: left;
+		}
 		cursor: pointer;
 		//background-color: #EEEEEE;
 		color: #808080;

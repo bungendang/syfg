@@ -30,6 +30,6 @@
     "commit": "686bcd891dfd6ccba6b3b40d6fd9888fd4914bf2"
   },
   "_source": "git://github.com/victorjonsson/jQuery-Form-Validator.git",
-  "_target": ">=2.2.8",
+  "_target": "~2.2.81",
   "_originalSource": "jquery-form-validator"
 }

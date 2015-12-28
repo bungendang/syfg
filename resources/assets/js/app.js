@@ -2,7 +2,9 @@ window.$ = window.jQuery = require('jquery')
 require('bootstrap-sass');
 
 
+
 $( document ).ready(function() {
+  new Clipboard('.btn');
     console.log($.fn.tooltip.Constructor.VERSION);
      $("#menu-toggle").click(function(e) {
         e.preventDefault();

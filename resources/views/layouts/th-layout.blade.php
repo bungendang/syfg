@@ -8,6 +8,7 @@
     <meta name="keywords" content="Art">
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="/assets/js/jquery.js"></script>
 	<script src="/assets/js/main.js"></script>
 </head>
@@ -16,6 +17,9 @@
 		<div class="container">
 			<div class="navigation">
 				<div class="logos"><a href="/">SYAIFUL GARIBALDI</a></div>
+				<div class="toggle-menu">
+					toggle
+				</div>
 				<div class="lang-mn">
 					<ul class="inline">
 						<li class="en"><a href="/en">ENGLISH</a></li>

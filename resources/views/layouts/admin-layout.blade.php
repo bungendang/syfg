@@ -5,7 +5,7 @@
 	<title>Syaiful Garibaldi - {{ $title or 'Administrator Page' }}</title>
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<script src="/js/scripts.js"></script>
+	<script src="/js/clipboard.min.js"></script>
 </head>
 <body class="dashboard">
 	<div class="header">
@@ -26,13 +26,9 @@
 		        <li><a href="/drive">Drive</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">Link</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
 		          <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
 		            <li role="separator" class="divider"></li>
 		            <li><a href="/logout">Logout</a></li>
 		          </ul>
@@ -55,9 +51,8 @@
 <script>
 
 </script>	
+<script src="/js/scripts.js"></script>
 <script src="/js/app.js"></script>
-<script src="/js/list.min.js"></script>
-<script src="/js/jquery.form-validator.min.js"></script>
 <script>$.validate();</script>
 </body>
 </html>

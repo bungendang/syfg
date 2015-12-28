@@ -12,7 +12,7 @@
 */
 
 Route::group(['domain' => 'admin.syfg.dev'], function () {
-    Route::get('/', ['middleware' => 'auth','uses'=>'AdminController@index','as'=>'admin']);
+    Route::get('/', ['middleware' => 'auth','uses'=>'AdminController@terhahGetAll','as'=>'admin']);
 	Route::get('/translate',['as'=>'admin.translate','uses'=>'AdminController@terhahGetAll']);
 	Route::get('/terhah/',['as'=>'admin.terhah','uses'=>'AdminController@terhahGetAll']);
 	Route::get('/terhah/add','AdminController@terhahGetAdd');
@@ -23,6 +23,9 @@ Route::group(['domain' => 'admin.syfg.dev'], function () {
 	Route::get('/delete/id/{id}/{thid}','AdminController@deleteIndonesianId');
 	Route::get('/delete/en/{id}/{thid}','AdminController@deleteEnglishId');
 	Route::get('/drive','AdminController@drive');
+	Route::get('/drive/edit/{id}','AdminController@getDriveEdit');
+	Route::post('/drive/edit/{id}','AdminController@postDriveEdit');
+	Route::any('/drive/delete/{id}','AdminController@postDriveDelete');
 	Route::post('/drive','ApiController@postUploadFile');
 	Route::get('/drive/upload',['as'=>'admin.getUploadFile','uses'=>'AdminController@driveGetUpload']);
 	Route::post('/drive/upload','AdminController@drivePostUpload');

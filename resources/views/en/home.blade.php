@@ -7,7 +7,10 @@
 @endsection
 
 @section('content')
+	<div class="inner-content">
     @foreach($upcomings as $upcoming)
 	{{$upcoming['title']}}
-    @endforeach
+    @endforeach		
+	</div>
+
 @endsection

@@ -8,6 +8,7 @@ use Syfg\English;
 use Syfg\ThtoId;
 use Syfg\ThtoEn;
 use Syfg\Files;
+use File;
 
 use DB;
 
@@ -36,6 +37,11 @@ class AdminController extends Controller
     {
         $getFile = Files::all();
         //return $getFile;
+  //      $imagick = new imagick('/files/ef8103516cbb4a5297d7db9789015a01.pdf[0]'); // 0 specifies the first page of the pdf
+
+//$imagick->setImageFormat('jpg'); // set the format of the output image
+//header('Content-Type: image/jpeg'); // set the header for the browser to understand
+//echo $imagick; // display the image
         return view('admin/drive')->with('files',$getFile);
     }
 
@@ -70,6 +76,29 @@ class AdminController extends Controller
 
 
 
+    public function getDriveEdit($id){
+        $data = Files::find($id);
+
+        return view('admin/edit-drive')->with('data',$data);
+    }
+    public function postDriveEdit(Request $request,$id){
+        $data = Files::find($id);
+        $data->title = $request->title;
+        $data->comment = $request->note;
+        $data->save();
+        return redirect()->action('AdminController@drive');
+    }
+
+    public function postDriveDelete($id){
+        $data = Files::find($id);
+
+   //     return $data->url;
+
+        File::delete(public_path().$data->url);
+       $data->delete();
+
+        return back()->withInput();
+    }
 
     public function terhahGetAll()
     {

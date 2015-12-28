@@ -25,10 +25,16 @@ class ApiController extends Controller
         //return $extension;
         $file = new Files;
         $file->title = $request->title;
+        $file->comment = $request->note;
         $file->url = '/'.$destinationPath.'/'.$filename;
         $file->save();
         return back()->withInput();
     	return $request->all();
     	return 'test upload';
+    }
+    public function getDriveEdit($id){
+        $data = Files::find($id);
+
+        return $data;
     }
 }

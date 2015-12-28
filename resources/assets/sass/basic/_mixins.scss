@@ -1,0 +1,97 @@
+@import "compass/utilities";
+@import "compass/css3";
+
+@mixin vertical-align{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+}
+
+
+@mixin text-center{
+	text-align:center;
+}
+@mixin text-left{
+	text-align:left;
+}
+
+@mixin container-width{
+	width:$default-container-width;
+}
+@mixin bg-cover{
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@mixin nav-vertical{
+		.top-nav{
+		list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	width:100%;
+    	@include text-left;
+    		li{
+    			width:120px;
+    			display: block;
+    			ul{
+    				display: none;
+    			}
+    		}
+    		> li:hover > .v-submenu {
+   				//left: 100%;
+  				//top: -50px;
+  				  display: inline-block; 
+  float:right
+			}
+		}
+}
+@mixin text-padding{
+  
+}
+@mixin li-icon{
+      width:40px;
+    height:40px;
+    top:-8px;
+  left:-60px;
+    display:block;
+    position:absolute;
+    content: " ";
+}
+/*
+    Input Mixins
+*/
+
+@mixin input-border{
+  border: 1px solid #a1a1a1;
+  @include border-radius(4px);
+}
+@mixin input-border-shadow{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  //padding: 3px 0px 3px 3px;
+  //margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+
+/*
+    Transision and fade effect
+*/
+
+
+
+@mixin moveUp{
+
+}
+
+@mixin trns{
+  @include transition(all, 1s , ease-in-out)
+}
+
+@mixin ngezoom{
+  transform: scale(1.1);
+}
+
+@mixin onhoverimg{
+  background-color: rgba(255, 255, 255, 0.1);
+}

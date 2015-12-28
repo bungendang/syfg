@@ -1,7 +1,5 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "normalize";
-@import "compass/utilities";
-@import "compass/css3";
 @import "susy";
 
 //setting susy
@@ -15,6 +13,7 @@ $susy: (
   gutter-position: inside,
 );
 ///end setting susy
+@import "basic/mixins";
 @import "syfg/variables";
 @import "syfg/grids";
 @import "syfg/navigations";

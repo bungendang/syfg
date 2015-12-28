@@ -18,5 +18,8 @@
   "devDependencies": {
     "list.pagination.js": "~0.1.1",
     "jquery-form-validator": "~2.2.81"
+  },
+  "dependencies": {
+    "clipboard": "~1.5.5"
   }
 }
