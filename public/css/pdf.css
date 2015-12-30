@@ -1,0 +1,61 @@
+/*
+    Input Mixins
+*/
+/*
+    Transision and fade effect
+*/
+/* line 1, ../../resources/assets/sass/pdf/_kamus.scss */
+html, body {
+  font-family: helvetica,serif; }
+
+@font-face {
+  font-family: "terhahFont";
+  src: url("/assets/fonts/terhahFontRegular.ttf"); }
+/* line 10, ../../resources/assets/sass/pdf/_kamus.scss */
+h1.title {
+  text-align: center; }
+
+/* line 14, ../../resources/assets/sass/pdf/_kamus.scss */
+.terhah {
+  font-family: 'terhahFont'; }
+
+/* line 18, ../../resources/assets/sass/pdf/_kamus.scss */
+.table {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left; }
+  /* line 22, ../../resources/assets/sass/pdf/_kamus.scss */
+  .table thead tr th {
+    min-width: 25%; }
+  /* line 27, ../../resources/assets/sass/pdf/_kamus.scss */
+  .table tbody {
+    width: 100%; }
+    /* line 29, ../../resources/assets/sass/pdf/_kamus.scss */
+    .table tbody tr.alfa {
+      width: 100%;
+      font-size: 60px;
+      text-align: center; }
+      /* line 34, ../../resources/assets/sass/pdf/_kamus.scss */
+      .table tbody tr.alfa td {
+        min-width: 25%;
+        padding-bottom: 0px;
+        vertical-align: middle; }
+    /* line 41, ../../resources/assets/sass/pdf/_kamus.scss */
+    .table tbody tr {
+      vertical-align: top; }
+      /* line 43, ../../resources/assets/sass/pdf/_kamus.scss */
+      .table tbody tr td {
+        min-width: 25%;
+        padding-bottom: 30px;
+        vertical-align: top; }
+        /* line 48, ../../resources/assets/sass/pdf/_kamus.scss */
+        .table tbody tr td span.terhah {
+          font-family: 'terhahFont'; }
+
+/* line 22, ../../resources/assets/sass/pdf.scss */
+body {
+  background-color: #FFF; }
+
+/*# sourceMappingURL=pdf.css.map */

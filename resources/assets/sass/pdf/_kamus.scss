@@ -1,0 +1,54 @@
+html,body{
+	font-family:helvetica,serif;
+}
+
+@font-face {
+    font-family:"terhahFont";
+    src: url("/assets/fonts/terhahFontRegular.ttf") /* TTF file for CSS3 browsers */
+}
+
+h1.title{
+	text-align: center;
+}
+
+.terhah{
+	font-family:'terhahFont';	
+}
+
+.table{
+	@include span(12 nest);
+	thead{
+		tr{
+			th{
+				min-width: 25%;
+			}
+		}
+	}
+	tbody{
+		width:100%;
+		tr.alfa{
+			width:100%;
+			font-size:60px;
+			text-align: center;
+			
+			td{
+				min-width: 25%;
+				padding-bottom:0px;
+				//border-bottom: 2px solid #000000 !important;
+				vertical-align: middle;
+			}
+		}
+		tr{
+			vertical-align: top;
+			td{
+				//@include span(3);
+				min-width: 25%;
+				padding-bottom:30px;
+				vertical-align: top;
+				span.terhah{
+				font-family:'terhahFont';					
+			}
+			}
+		}
+	}
+}

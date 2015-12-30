@@ -27,6 +27,19 @@ a:hover {
 	padding:30px 0px;
 	@include span(12 nest);
 }
+
+//form
+
+.form-control{
+	@include span(12 nest);
+}
+
+textarea{
+	padding:5px;
+	height:200px;
+}
+//endform
+
 .main-body{
 	@include span(12 nest);
 	.sidebar{
@@ -42,7 +55,25 @@ a:hover {
 		@include susy-breakpoint($tablet){
 			@include span(9 last);			
 		}
-
+		.terhah-dictionary{
+			@include span(12 nest);
+			.dict-left{
+				@include span(6 first);
+				padding-left:0;
+			}
+			.dict-right{
+				@include span(6 last);
+				padding-right:0;
+				.result{
+					@include span(12 nest);
+					height: 200px;
+					background-color: #808080;
+				}
+			}
+			.bottom-content{
+				@include span(12);
+			}
+		}
 		margin-bottom:2em;
 		.inner-content{
 			//padding-top:50px;
@@ -80,9 +111,9 @@ a:hover {
 			//end works page
 			@include span(8 of 12);
 			@include push(2);
-			text-align: justify;
+			text-align: left;
 			.post-content{
-				text-align: justify;
+				text-align: left;
 			}
 			ul.publication-list{
 				margin: 0px;
@@ -112,6 +143,7 @@ a:hover {
         				li.year{
         					font-size: 14;
           font-weight: bold;
+          padding:10px 0px;
         				}
 					}
 				}

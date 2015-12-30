@@ -9,8 +9,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<script src="/assets/js/jquery.js"></script>
-	<script src="/assets/js/main.js"></script>
+
 </head>
 <body>
 	<div class="header">
@@ -19,7 +18,7 @@
 				<div class="logos"><a href="/en">SYAIFUL GARIBALDI</a></div>
 				<div class="toggle-menu" id="toggleMenu">
 					<button class="btn btn-default"><i class="fa fa-bars"></i>
-</button>
+					</button>
 				</div>
 				<div class="lang-mn">
 					<div class="inner-lang-mn">
@@ -57,5 +56,8 @@
 	    </div>			
 	</div>
 	</div>
+	<script src="/assets/js/jquery.js"></script>
+	@yield('script')
+	<script src="/assets/js/main.js"></script>
 </body>
 </html>

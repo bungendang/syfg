@@ -1,0 +1,25 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "normalize";
+@import "susy";
+
+//setting susy
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  math: fluid,
+  container: 1210px,
+  container-position: center,
+  output: float,
+  gutter-position: inside,
+);
+///end setting susy
+@import "basic/mixins";
+@import "syfg/variables";
+@import "pdf/kamus";
+
+
+
+body{
+	background-color: #FFF;
+}
+//@import "../syfg/sass/grids";

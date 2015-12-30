@@ -1,0 +1,2 @@
+$(".btn-source > .btn").click(function(){$(".btn-group > .btn").removeClass("active"),$(this).addClass("active")}),$(function(){$("#btnThSrc").hasClass("active")?console.log("yang aktif btn th source"):$("#btnEnSrc").hasClass("active")&&console.log("yang aktif btn en source")});var Router=Backbone.Router.extend({routes:{"*th/en":"thSourceEnResult","*en/th":"enSourceThResult","id/th":"idSourceThResult"},thSourceEnResult:function(){}});new Router,Backbone.history.start();var SourceBtn=Backbone.View.Extend({});
+//# sourceMappingURL=fe-script.js.map

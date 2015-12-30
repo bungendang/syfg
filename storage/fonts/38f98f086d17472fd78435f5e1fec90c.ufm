@@ -1,0 +1,88 @@
+StartFontMetrics 4.1
+Notice Converted by PHP-font-lib
+Comment https://github.com/PhenX/php-font-lib
+EncodingScheme FontSpecific
+FontName terhahFont
+FontSubfamily Regular
+UniqueID MACR: terhahFont: 2010
+FullName terhahFont
+Version Version 1.002 2011
+PostScriptName terhahFont
+Trademark terhahFont is a trademark of  Syaiful Aulia Garibaldi
+Designer Syaiful Aulia Garibaldi
+CompatibleFullName 瑥牨慨䙯湴
+Weight Medium
+ItalicAngle 0
+IsFixedPitch false
+UnderlineThickness 20
+UnderlinePosition -133
+FontHeightOffset 0
+Ascender 805
+Descender -197
+FontBBox 14 -197 1284 805
+StartCharMetrics 66
+U 32 ; WX 500 ; N space ; G 3
+U 48 ; WX 1076 ; N zero ; G 4
+U 49 ; WX 1085 ; N one ; G 5
+U 50 ; WX 707 ; N two ; G 6
+U 51 ; WX 705 ; N three ; G 7
+U 52 ; WX 744 ; N four ; G 8
+U 53 ; WX 726 ; N five ; G 9
+U 54 ; WX 1049 ; N six ; G 10
+U 55 ; WX 842 ; N seven ; G 11
+U 56 ; WX 852 ; N eight ; G 12
+U 57 ; WX 720 ; N nine ; G 13
+U 65 ; WX 812 ; N A ; G 40
+U 66 ; WX 1088 ; N B ; G 41
+U 67 ; WX 1124 ; N C ; G 42
+U 68 ; WX 804 ; N D ; G 43
+U 69 ; WX 934 ; N E ; G 44
+U 70 ; WX 954 ; N F ; G 45
+U 71 ; WX 941 ; N G ; G 46
+U 72 ; WX 1140 ; N H ; G 47
+U 73 ; WX 935 ; N I ; G 48
+U 74 ; WX 1354 ; N J ; G 49
+U 75 ; WX 952 ; N K ; G 50
+U 76 ; WX 805 ; N L ; G 51
+U 77 ; WX 1145 ; N M ; G 52
+U 78 ; WX 1249 ; N N ; G 53
+U 79 ; WX 947 ; N O ; G 54
+U 80 ; WX 809 ; N P ; G 55
+U 81 ; WX 1150 ; N Q ; G 56
+U 82 ; WX 928 ; N R ; G 57
+U 83 ; WX 1156 ; N S ; G 58
+U 84 ; WX 1215 ; N T ; G 59
+U 85 ; WX 943 ; N U ; G 60
+U 86 ; WX 948 ; N V ; G 61
+U 87 ; WX 1106 ; N W ; G 62
+U 88 ; WX 787 ; N X ; G 63
+U 89 ; WX 631 ; N Y ; G 64
+U 90 ; WX 1145 ; N Z ; G 65
+U 97 ; WX 536 ; N a ; G 14
+U 98 ; WX 601 ; N b ; G 15
+U 99 ; WX 601 ; N c ; G 16
+U 100 ; WX 502 ; N d ; G 17
+U 101 ; WX 679 ; N e ; G 18
+U 102 ; WX 705 ; N f ; G 19
+U 103 ; WX 659 ; N g ; G 20
+U 104 ; WX 792 ; N h ; G 21
+U 105 ; WX 671 ; N i ; G 22
+U 106 ; WX 986 ; N j ; G 23
+U 107 ; WX 617 ; N k ; G 24
+U 108 ; WX 456 ; N l ; G 25
+U 109 ; WX 800 ; N m ; G 26
+U 110 ; WX 792 ; N n ; G 27
+U 111 ; WX 610 ; N o ; G 28
+U 112 ; WX 464 ; N p ; G 29
+U 113 ; WX 804 ; N q ; G 30
+U 114 ; WX 677 ; N r ; G 31
+U 115 ; WX 613 ; N s ; G 32
+U 116 ; WX 623 ; N t ; G 33
+U 117 ; WX 670 ; N u ; G 34
+U 118 ; WX 577 ; N v ; G 35
+U 119 ; WX 709 ; N w ; G 36
+U 120 ; WX 428 ; N x ; G 37
+U 121 ; WX 384 ; N y ; G 38
+U 122 ; WX 631 ; N z ; G 39
+EndCharMetrics
+EndFontMetrics

@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://syaifulgaribaldi.com',
+    'url' => 'http://www.syaifulgaribaldi.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Jakarta',
 
     /*
     |--------------------------------------------------------------------------
@@ -146,7 +146,7 @@ return [
         Syfg\Providers\EventServiceProvider::class,
         Syfg\Providers\RouteServiceProvider::class,
         Cyberduck\LaravelWpApi\LaravelWpApiServiceProvider::class,
-
+Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -197,7 +197,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'WpApi' => Cyberduck\LaravelWpApi\Facades\WpApi::class,
-
+'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];

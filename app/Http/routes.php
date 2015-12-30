@@ -32,6 +32,8 @@ Route::group(['domain' => 'admin.syfg.dev'], function () {
 	Route::get('/api/v1/file',['as'=>'api.listFolder','uses'=>'ApiController@fileAll']);
 	Route::get('/api/v1/upload',['as'=>'uploadFile.get','uses'=>'ApiController@getUploadFile']);
 	Route::post('/api/v1/upload',['as'=>'uploadFile.post','uses'=>'ApiController@postUploadFile']);
+	Route::get('/api/terhahs/','ApiController@getAllTerhah');
+	Route::get('/api/terhah/dictionary','ApiController@showTerhahDictionary');
 });
 
 

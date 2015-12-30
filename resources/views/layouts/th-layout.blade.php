@@ -17,34 +17,38 @@
 		<div class="container">
 			<div class="navigation">
 				<div class="logos"><a href="/">SYAIFUL GARIBALDI</a></div>
-				<div class="toggle-menu">
-					toggle
+				<div class="toggle-menu" id="toggleMenu">
+					<button class="btn btn-default"><i class="fa fa-bars"></i>
+					</button>
 				</div>
 				<div class="lang-mn">
-					<ul class="inline">
-						<li class="en"><a href="/en">ENGLISH</a></li>
-						<li class="th"><a href="/">TERHAH</a></li>
-					</ul>
+					<div class="inner-lang-mn">
+						<ul class="inline">
+							<li class="en"><a href="/en">ENGLISH</a></li>
+							<li class="th"><a href="/">TERHAH</a></li>
+						</ul>						
+					</div>
+
 				</div>
 			</div>		
 		</div>
 	</div>
 	<div class="main-body">
 	<div class="container">
-		<div class="sidebar">
+		<div class="sidebar" id="mainMenu">
 		@section('sidebar')	
 	    	<ul class="sidebar-menu" id="sidebarMenu">
-	    		<li><a href="/terhah-lang" class="{{ (\Request::route()->getName() == 'en.terhah-lang') ? 'active' : '' }}">TERHAH LANGUAGE</a></li>
-	    		<li class="dropdown {{ (\Request::route()->getName() == 'th.worksub') ? 'display' : '' }}" id="dropdown">WORKS
+	    		<li><a href="/en/terhah-lang" class="{{ (\Request::route()->getName() == 'en.terhah-lang') ? 'active' : '' }}">TERHAH LANGUAGE</a></li>
+	    		<li class="dropdown {{ (\Request::route()->getName() == 'en.worksub') ? 'display' : '' }}" id="dropdown">WORKS
 					<ul>
 					@foreach($karya as $work)
-						<li><a href="/works/{{$work['slug']}}" class="{{ Request::is('th/works/'.$work['slug']) ? 'active' : '' }}">{{$work['title']}}</a></li>
+						<li><a href="/en/works/{{$work['slug']}}" class="{{ Request::is('en/works/'.$work['slug']) ? 'active' : '' }}">{{$work['title']}}</a></li>
 					@endforeach
 					</ul>
 	    		</li>
-	    		<li><a href="/bio" class="{{ (\Request::route()->getName() == 'en.bio') ? 'active' : '' }}">BIO</a></li>
-	    		<li><a href="/publication" class="{{ (\Request::route()->getName() == 'en.publication') ? 'active' : '' }}">PUBLICATION</a></li>
-	    		<li><a href="/contact" class="{{ (\Request::route()->getName() == 'en.contact') ? 'active' : '' }}">CONTACT</a></li>
+	    		<li><a href="/en/bio" class="{{ (\Request::route()->getName() == 'en.bio') ? 'active' : '' }}">BIO</a></li>
+	    		<li><a href="/en/publication" class="{{ (\Request::route()->getName() == 'en.publication') ? 'active' : '' }}">PUBLICATION</a></li>
+	    		<li><a href="/en/contact" class="{{ (\Request::route()->getName() == 'en.contact') ? 'active' : '' }}">CONTACT</a></li>
 	    	</ul>
 	    @show
 	    </div>

@@ -20,7 +20,9 @@ class EnglishController extends Controller
     }
     public function terhahLang()
     {
-    	return view('en/terhah-lang');
+        $data = json_decode(file_get_contents('http://admin.syfg.dev/api/terhahs'));
+        
+    	return view('en/terhah-lang')->with('data',$data->results);
     }
     public function works(Request $request)
     {

@@ -14,9 +14,11 @@ $susy: (
 );
 ///end setting susy
 @import "basic/mixins";
+@import url(https://fonts.googleapis.com/css?family=Poppins:500);
 @import "syfg/variables";
 @import "syfg/grids";
 @import "syfg/navigations";
+@import "syfg/forms";
 
 
 
