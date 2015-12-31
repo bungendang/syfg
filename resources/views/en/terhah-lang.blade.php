@@ -20,16 +20,17 @@
         </div>
 
             <div class="source-text">
-                <textarea name="" id="" rows="6" class="form-control"></textarea>
+                <textarea name="sourceArea" id="soursceArea" rows="6" class="form-control"></textarea>
+                <input type="text" id="sourceArea" class="form-control">
             </div>
         </div>
         <div class="dict-right">
             <button>English</button>
             <button>Indonesian</button>
             <button>Terhah</button>
-            <span class="result" id="result">
+            <div class="result" id="resultArea">
                 
-            </span>
+            </div>
         </div>
         <div class="bottom-content">
             <a href="http://admin.syfg.dev/api/terhah/dictionary" class="btn">Download Last Revision</a>

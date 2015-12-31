@@ -67,7 +67,8 @@ textarea{
 				.result{
 					@include span(12 nest);
 					height: 200px;
-					background-color: #808080;
+					background-color: #cccccc;
+					color: $fontColor;
 				}
 			}
 			.bottom-content{
