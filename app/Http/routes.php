@@ -56,11 +56,13 @@ Route::group(['domain' => 'syfg.dev'],function(){
 		Route::get('/publication',['as'=>'en.publication','uses'=>'EnglishController@publication']);
 		Route::get('/contact',['as'=>'en.contact','uses'=>'EnglishController@contact']);
 	});
-	Route::group(['prefix'=>'api'],function(){
-		Route::get('/terhahs/','ApiController@getAllTerhah');
-	});
+	
 
 });
+
+Route::group(['prefix'=>'api'],function(){
+		Route::get('/terhahs/','ApiController@getAllTerhah');
+	});
 
 Route::get('/login', ['uses'=>'Auth\AuthController@getLogin','as'=>'login']);
 Route::post('/login', 'Auth\AuthController@postLogin');
